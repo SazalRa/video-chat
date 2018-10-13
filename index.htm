@@ -1,0 +1,18 @@
+<html>
+    <head></head>
+    <body>
+        <video controls>
+		  <source src="http://localhost:3748/video" type="video/mp4">
+		  
+		Your browser does not support the video tag.
+        </video>
+        
+        <device type="media" onchange="update(this.data)"></device>
+        <video autoplay></video>
+        <script>
+        function update(stream) {
+            document.querySelector('video').src = stream.url;
+        }
+        </script>
+    </body>
+</html>
